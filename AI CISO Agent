@@ -1,0 +1,79 @@
+ai-ciso-agent/
+│── README.md
+│── LICENSE
+│── .env.example
+│── requirements.txt
+│── docker-compose.yml
+│── Dockerfile
+│── .gitignore
+│
+├── app/
+│   ├── main.py
+│   ├── config.py
+│   ├── scheduler.py
+│   ├── api/
+│   │   ├── routes.py
+│   │   └── auth.py
+│   │
+│   ├── agents/
+│   │   ├── ciso_brain.py
+│   │   ├── risk_agent.py
+│   │   ├── soc_agent.py
+│   │   ├── compliance_agent.py
+│   │   ├── incident_agent.py
+│   │   └── architecture_agent.py
+│   │
+│   ├── integrations/
+│   │   ├── splunk.py
+│   │   ├── sentinel.py
+│   │   ├── aws_securityhub.py
+│   │   ├── azure_defender.py
+│   │   ├── gcp_scc.py
+│   │   └── vuln_scanners.py
+│   │
+│   ├── llm/
+│   │   ├── provider.py
+│   │   ├── prompts.py
+│   │   └── embeddings.py
+│   │
+│   ├── db/
+│   │   ├── postgres.py
+│   │   ├── vector_store.py
+│   │   └── models.py
+│   │
+│   ├── reports/
+│   │   ├── daily_report.py
+│   │   ├── board_report.py
+│   │   └── pdf_export.py
+│   │
+│   └── utils/
+│       ├── logger.py
+│       ├── helpers.py
+│       └── risk_scoring.py
+│
+├── dashboard/
+│   ├── streamlit_app.py
+│   ├── pages/
+│   │   ├── executive.py
+│   │   ├── incidents.py
+│   │   ├── compliance.py
+│   │   └── vulnerabilities.py
+│
+├── data/
+│   ├── policies/
+│   ├── frameworks/
+│   │   ├── iso27001_controls.json
+│   │   ├── nist_csf.json
+│   │   └── owasp_top10.json
+│   └── sample_logs/
+│
+├── tests/
+│   ├── test_agents.py
+│   ├── test_api.py
+│   ├── test_reports.py
+│   └── test_integrations.py
+│
+└── docs/
+    ├── architecture.md
+    ├── deployment.md
+    └── roadmap.md
